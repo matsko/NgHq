@@ -1,0 +1,15 @@
+:host {
+  width:15px;
+  height:15px;
+  border-radius:15px;
+  vertical-align: top;
+  display:inline-block;
+
+  &.is-passing {
+    background:green;
+  }
+
+  &.is-failing {
+    background:red;
+  }
+}

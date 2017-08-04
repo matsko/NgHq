@@ -1,0 +1,38 @@
+<div class="details-container" fxLayout.xs="column">
+
+  <div fxFlex="33.33%" class="details-area">
+    <header>
+      My Issues
+    </header>
+
+    <div class="inner">
+      <div class="items-list">
+        <app-list-item *ngFor="let issue of data.issues" [item]="issue"></app-list-item>
+      </div>
+    </div>
+  </div>
+
+  <div fxFlex="33.33%" class="details-area">
+    <header>
+      My PRs
+    </header>
+
+    <div class="inner">
+      <div class="items-list">
+        <app-list-item *ngFor="let pr of data.prs" [item]="pr"></app-list-item>
+      </div>
+    </div>
+  </div>
+
+  <div fxFlex="33.33%" class="details-area">
+    <header>
+      Assigned
+    </header>
+
+    <div class="inner">
+      <div class="items-list">
+        <app-list-item *ngFor="let item of data.assigned" [item]="item"></app-list-item>
+      </div>
+    </div>
+  </div>
+</div>

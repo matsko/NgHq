@@ -1,0 +1,9 @@
+.details-container {
+  .details-area {
+    padding:2rem;
+  }
+
+  .details-area + .details-area {
+    border-left:2px dashed black;
+  }
+}
