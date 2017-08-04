@@ -1,11 +1,18 @@
 import { HostBinding, Component, Input } from '@angular/core';
 
+const STATUS_PASSING = 'passing';
+const STATUS_FAILING = 'failing';
+const STATUS_PENDING = 'pending';
+
 @Component({
   selector: 'app-status',
   templateUrl: './status.component.html',
   styleUrls: ['./status.component.scss']
 })
 export class StatusComponent {
+  @Input('label')
+  public label = '';
+
   @Input('status')
   public status: string = '';
 
@@ -13,14 +20,13 @@ export class StatusComponent {
   get className() {
     let className = 'result';
     switch (this.status) {
-      case this.STATUS_PASSING:
+      case STATUS_PASSING:
         return className + ' is-passing';
-      case this.STATUS_FAILING:
+      case STATUS_FAILING:
         return className + ' is-failing';
+      case STATUS_PENDING:
+        return className + ' is-pending';
     }
     return className;
   }
-
-  public STATUS_PASSING = 'passing';
-  public STATUS_FAILING = 'failing';
 }

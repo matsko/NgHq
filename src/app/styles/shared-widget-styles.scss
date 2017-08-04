@@ -1,14 +1,16 @@
 :host {
+  padding:1em;
+  text-align:center;
   display:block;
-  padding:2rem;
   height:100%;
   position:relative;
   cursor: pointer;
 }
 
 header {
+  font-family: "Droid Sans Mono";
   margin-bottom:1rem;
-  font-size:2rem;
+  font-size:1.8rem;
 }
 
 .label {
@@ -24,7 +26,7 @@ footer {
 .count {
   font-size:5rem;
   &.small {
-    font-size:2rem;
+    font-size:2.5rem;
   }
 
   sub {
@@ -44,7 +46,9 @@ app-status {
   transition:300ms ease-out;
 }
 
-:host:not(:hover) app-status {
+:host:not(:hover) app-status,
+:host:not(:hover) .ok,
+:host:not(:hover) .not-ok {
   opacity:0.3;
 }
 

@@ -14,4 +14,8 @@ export class ListItemComponent {
   get title() {
     return this.data['title'] || '';
   }
+
+  get statusDetails() {
+    return this.data['statusDetails'] || [];
+  }
 }
